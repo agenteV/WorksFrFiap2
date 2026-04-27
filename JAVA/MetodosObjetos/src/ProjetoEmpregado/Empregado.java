@@ -1,6 +1,6 @@
 package ProjetoEmpregado;
 
-public class Empregado {
+public abstract class Empregado {
     long matricula;
     String nome;
 
@@ -9,7 +9,13 @@ public class Empregado {
         this.nome = nome;
     }
 
-    public double calcularSalario(){
-        return 0;
+    public abstract double calcularSalario();
+
+    @Override
+    public String toString() {
+        return "Empregado{" +
+                "matricula=" + matricula +
+                ", nome='" + nome + '\'' +
+                '}';
     }
 }
